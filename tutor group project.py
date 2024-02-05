@@ -1,13 +1,20 @@
+#Importing csv so that i can import newandimprovednamebook.csv
 import csv
+
 runacoupletimes= True
 #add student details
 def add_students():
     students=open("newandimprovednamebook.csv","a")
+    #Adding a student Id which is added to row 1
     Identity=(input("Enter a student ID"))
+    #Adding a students forename which is added to row 2
     forename=input("Enter the students forename")
+    #Adding a students surname which is added to row 3
     surname=input("Enter the students surname")
+    #Closing newandimprovednamebook.csv
     students.close()
     with open("newandimprovednamebook.csv","a") as file:
+        #Writes a new column using the ID, forename and surname
         file.write("\n"+str(Identity) + "," + forename + "," + surname)
 
 
